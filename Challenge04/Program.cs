@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 int FindMissing(int[] arr)
@@ -8,39 +9,25 @@ int FindMissing(int[] arr)
         return 1;
     }
 
-    int lastIndex = arr.Length - 1;
+    int i = 1;
+    var prevs = new HashSet<int>(arr);
 
-    //  Sort array
-    arr = arr.OrderBy(num => num).ToArray();
-
-    int startIndex = 0;
-
-    while (arr[startIndex] < 0)
+    while (prevs.Contains(i))
     {
-        if (startIndex == lastIndex)
-        {
-            return 1;
-        }
-        startIndex++;
+        i++;
     }
 
-    //  Start index is at the first positive number
-    int firstPositiveIndex = startIndex;
-    int intToFind = 1;
-
-    while (intToFind == arr[startIndex])
-    {
-        if (startIndex == lastIndex)
-        {
-            return intToFind;
-        }
-        startIndex++;
-        intToFind++;
-    }
-
-    return intToFind;
+    return i;
 }
 
+int[] inputs = new int[] { 3, 4, -1, 1, 2, 6 };
+int result = FindMissing(inputs);
 
-int result = FindMissing(new int[] { 3, 4, -1, 1, 2, 6 });
-Console.WriteLine(result);
+Console.WriteLine("Inputs = [{0}]", string.Join(", ", inputs));
+Console.WriteLine("First Missing Number = {0}", result);
+
+//  Create an array with numbers that include the 1 to 200 with 101 missing
+inputs = Enumerable.Range(1, 100).Union(Enumerable.Range(102, 99)).OrderBy(_ => Guid.NewGuid().ToString()).ToArray();
+result = FindMissing(inputs);
+Console.WriteLine("Inputs = [{0}]", string.Join(", ", inputs));
+Console.WriteLine("First Missing Number = {0}", result);
