@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 
 Console.WriteLine("Given the root to a binary tree, implement Serialize(root), which serializes the tree into a string, and Deserialize(s), which deserializes the string back into the tree.");
 
@@ -24,12 +24,12 @@ Node Deserialize(string tree)
         return null;
     }
 
-    Node Helper(IEnumerator enumerator)
+    Node Helper(IEnumerator<string> enumerator)
     {
         if (enumerator.MoveNext())
         {
             //  Get the current value of the enumerator
-            string current = enumerator.Current as string;
+            string current = enumerator.Current;
 
             if (current == "#")
             {
@@ -37,7 +37,7 @@ Node Deserialize(string tree)
             }
 
             //  Get the value
-            int value = int.Parse(enumerator.Current as string);
+            int value = int.Parse(enumerator.Current);
 
             //  Create new node with the value and process the left and right side
             return new Node(value, Helper(enumerator), Helper(enumerator));
@@ -47,10 +47,10 @@ Node Deserialize(string tree)
     }
 
     //  Split tree with space
-    string[] nodes = tree.Split(' ');
+    IEnumerable<string> nodes = tree.Split(' ');
 
     //  Get the enumerator of the node strings
-    IEnumerator enumerator = nodes.GetEnumerator();
+    IEnumerator<string> enumerator = nodes.GetEnumerator();
 
     return Helper(enumerator);
 }
