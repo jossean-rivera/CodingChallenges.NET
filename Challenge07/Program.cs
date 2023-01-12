@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-
+﻿
 int NumberOfEncodings(string s) 
 {
     if (s.StartsWith('0')) 
@@ -17,4 +15,15 @@ int NumberOfEncodings(string s)
     {
         total += NumberOfEncodings(s.Substring(2));
     }
+
+    total += NumberOfEncodings(s.Substring(1));
+    return total;
 }
+
+void RunTest(string input)
+{
+    Console.WriteLine("Input = {0}", input);
+    Console.WriteLine("NumberOfEncodings = {0}", NumberOfEncodings(input));
+}
+
+RunTest("111");
