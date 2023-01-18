@@ -7,14 +7,14 @@ using System.Xml.Linq;
 /// </summary>
 internal class AlphabetTrie : IEnumerable<string>
 {
-    private readonly Dictionary<char, Node> _root2 = new();
+    private readonly Dictionary<char, Node> _root = new();
 
     public void AddWord(string word)
     {
         if (string.IsNullOrWhiteSpace(word)) return;
 
         char c;
-        Dictionary<char, Node> index = _root2;
+        Dictionary<char, Node> index = _root;
 
         for (int i = 0; i < word.Length; i++)
         {
@@ -41,10 +41,9 @@ internal class AlphabetTrie : IEnumerable<string>
 
     public IEnumerable<string> GetWordsWithPrefix(string prefix)
     {
-        prefix = prefix.ToLower();
         char c;
 
-        Dictionary<char, Node> index = _root2;
+        Dictionary<char, Node> index = _root;
 
         for (int i = 0; i < prefix.Length; i++)
         {

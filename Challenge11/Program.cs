@@ -1,9 +1,233 @@
 ﻿
 AlphabetTrie trie = new();
-trie.AddWord("dog");
-trie.AddWord("deer");
-trie.AddWord("deal");
-
+trie.AddWord("Afghanistan");
+trie.AddWord("Albania");
+trie.AddWord("Algeria");
+trie.AddWord("Andorra");
+trie.AddWord("Angola");
+trie.AddWord("Antigua and Barbuda");
+trie.AddWord("Argentina");
+trie.AddWord("Armenia");
+trie.AddWord("Australia");
+trie.AddWord("Austria");
+trie.AddWord("Austrian Empire");
+trie.AddWord("Azerbaijan");
+trie.AddWord("Baden");
+trie.AddWord("Bahamas, The");
+trie.AddWord("Bahrain");
+trie.AddWord("Bangladesh");
+trie.AddWord("Barbados");
+trie.AddWord("Bavaria");
+trie.AddWord("Belarus");
+trie.AddWord("Belgium");
+trie.AddWord("Belize");
+trie.AddWord("Benin (Dahomey)");
+trie.AddWord("Bolivia");
+trie.AddWord("Bosnia and Herzegovina");
+trie.AddWord("Botswana");
+trie.AddWord("Brazil");
+trie.AddWord("Brunei");
+trie.AddWord("Brunswick and Lüneburg");
+trie.AddWord("Bulgaria");
+trie.AddWord("Burkina Faso (Upper Volta)");
+trie.AddWord("Burma");
+trie.AddWord("Burundi");
+trie.AddWord("Cabo Verde");
+trie.AddWord("Cambodia");
+trie.AddWord("Cameroon");
+trie.AddWord("Canada");
+trie.AddWord("Cayman Islands, The");
+trie.AddWord("Central African Republic");
+trie.AddWord("Central American Federation");
+trie.AddWord("Chad");
+trie.AddWord("Chile");
+trie.AddWord("China");
+trie.AddWord("Colombia");
+trie.AddWord("Comoros");
+trie.AddWord("Congo Free State, The");
+trie.AddWord("Costa Rica");
+trie.AddWord("Cote d’Ivoire (Ivory Coast)");
+trie.AddWord("Croatia");
+trie.AddWord("Cuba");
+trie.AddWord("Cyprus");
+trie.AddWord("Czechia");
+trie.AddWord("Czechoslovakia");
+trie.AddWord("Democratic Republic of the Congo");
+trie.AddWord("Denmark");
+trie.AddWord("Djibouti");
+trie.AddWord("Dominica");
+trie.AddWord("Dominican Republic");
+trie.AddWord("Duchy of Parma, The");
+trie.AddWord("East Germany (German Democratic Republic)");
+trie.AddWord("Ecuador");
+trie.AddWord("Egypt");
+trie.AddWord("El Salvador");
+trie.AddWord("Equatorial Guinea");
+trie.AddWord("Eritrea");
+trie.AddWord("Estonia");
+trie.AddWord("Eswatini");
+trie.AddWord("Ethiopia");
+trie.AddWord("Federal Government of Germany (1848-49)");
+trie.AddWord("Fiji");
+trie.AddWord("Finland");
+trie.AddWord("France");
+trie.AddWord("Gabon");
+trie.AddWord("Gambia, The");
+trie.AddWord("Georgia");
+trie.AddWord("Germany");
+trie.AddWord("Ghana");
+trie.AddWord("Grand Duchy of Tuscany, The");
+trie.AddWord("Greece");
+trie.AddWord("Grenada");
+trie.AddWord("Guatemala");
+trie.AddWord("Guinea");
+trie.AddWord("Guinea-Bissau");
+trie.AddWord("Guyana");
+trie.AddWord("Haiti");
+trie.AddWord("Hanover");
+trie.AddWord("Hanseatic Republics");
+trie.AddWord("Hawaii");
+trie.AddWord("Hesse");
+trie.AddWord("Holy See");
+trie.AddWord("Honduras");
+trie.AddWord("Hungary");
+trie.AddWord("Iceland");
+trie.AddWord("India");
+trie.AddWord("Indonesia");
+trie.AddWord("Iran");
+trie.AddWord("Iraq");
+trie.AddWord("Ireland");
+trie.AddWord("Israel");
+trie.AddWord("Italy");
+trie.AddWord("Jamaica");
+trie.AddWord("Japan");
+trie.AddWord("Jordan");
+trie.AddWord("Kazakhstan");
+trie.AddWord("Kenya");
+trie.AddWord("Kingdom of Serbia/Yugoslavia");
+trie.AddWord("Kiribati");
+trie.AddWord("Korea");
+trie.AddWord("Kosovo");
+trie.AddWord("Kuwait");
+trie.AddWord("Kyrgyzstan");
+trie.AddWord("Laos");
+trie.AddWord("Latvia");
+trie.AddWord("Lebanon");
+trie.AddWord("Lesotho");
+trie.AddWord("Lew Chew (Loochoo)");
+trie.AddWord("Liberia");
+trie.AddWord("Libya");
+trie.AddWord("Liechtenstein");
+trie.AddWord("Lithuania");
+trie.AddWord("Luxembourg");
+trie.AddWord("Madagascar");
+trie.AddWord("Malawi");
+trie.AddWord("Malaysia");
+trie.AddWord("Maldives");
+trie.AddWord("Mali");
+trie.AddWord("Malta");
+trie.AddWord("Marshall Islands");
+trie.AddWord("Mauritania");
+trie.AddWord("Mauritius");
+trie.AddWord("Mecklenburg-Schwerin");
+trie.AddWord("Mecklenburg-Strelitz");
+trie.AddWord("Mexico");
+trie.AddWord("Micronesia");
+trie.AddWord("Moldova");
+trie.AddWord("Monaco");
+trie.AddWord("Mongolia");
+trie.AddWord("Montenegro");
+trie.AddWord("Morocco");
+trie.AddWord("Mozambique");
+trie.AddWord("Namibia");
+trie.AddWord("Nassau");
+trie.AddWord("Nauru");
+trie.AddWord("Nepal");
+trie.AddWord("Netherlands, The");
+trie.AddWord("New Zealand");
+trie.AddWord("Nicaragua");
+trie.AddWord("Niger");
+trie.AddWord("Nigeria");
+trie.AddWord("North German Confederation");
+trie.AddWord("North German Union");
+trie.AddWord("North Macedonia");
+trie.AddWord("Norway");
+trie.AddWord("");
+trie.AddWord("Oldenburg");
+trie.AddWord("Oman");
+trie.AddWord("Orange Free State");
+trie.AddWord("Pakistan");
+trie.AddWord("Palau");
+trie.AddWord("Panama");
+trie.AddWord("Papal States");
+trie.AddWord("Papua New Guinea");
+trie.AddWord("Paraguay");
+trie.AddWord("Peru");
+trie.AddWord("Philippines");
+trie.AddWord("Piedmont-Sardinia");
+trie.AddWord("Poland");
+trie.AddWord("Portugal");
+trie.AddWord("Puerto Rico");
+trie.AddWord("Qatar");
+trie.AddWord("Republic of Genoa");
+trie.AddWord("Republic of Korea (South Korea)");
+trie.AddWord("Republic of the Congo");
+trie.AddWord("Romania");
+trie.AddWord("Russia");
+trie.AddWord("Rwanda");
+trie.AddWord("Saint Kitts and Nevis");
+trie.AddWord("Saint Lucia");
+trie.AddWord("Saint Vincent and the Grenadines");
+trie.AddWord("Samoa");
+trie.AddWord("San Marino");
+trie.AddWord("Sao Tome and Principe");
+trie.AddWord("Saudi Arabia");
+trie.AddWord("Schaumburg-Lippe");
+trie.AddWord("Senegal");
+trie.AddWord("Serbia");
+trie.AddWord("Seychelles");
+trie.AddWord("Sierra Leone");
+trie.AddWord("Singapore");
+trie.AddWord("Slovakia");
+trie.AddWord("Slovenia");
+trie.AddWord("Solomon Islands");
+trie.AddWord("Somalia");
+trie.AddWord("South Africa");
+trie.AddWord("South Sudan");
+trie.AddWord("Spain");
+trie.AddWord("Sri Lanka");
+trie.AddWord("Sudan");
+trie.AddWord("Suriname");
+trie.AddWord("Sweden");
+trie.AddWord("Switzerland");
+trie.AddWord("Syria");
+trie.AddWord("Tajikistan");
+trie.AddWord("Tanzania");
+trie.AddWord("Texas");
+trie.AddWord("Thailand");
+trie.AddWord("Timor-Leste");
+trie.AddWord("Togo");
+trie.AddWord("Tonga");
+trie.AddWord("Trinidad and Tobago");
+trie.AddWord("Tunisia");
+trie.AddWord("Turkey");
+trie.AddWord("Turkmenistan");
+trie.AddWord("Tuvalu");
+trie.AddWord("Two Sicilies");
+trie.AddWord("Uganda");
+trie.AddWord("Ukraine");
+trie.AddWord("Union of Soviet Socialist Republics");
+trie.AddWord("United Arab Emirates, The");
+trie.AddWord("United Kingdom, The");
+trie.AddWord("Uruguay");
+trie.AddWord("Uzbekistan");
+trie.AddWord("Vanuatu");
+trie.AddWord("Venezuela");
+trie.AddWord("Vietnam");
+trie.AddWord("Württemberg");
+trie.AddWord("Yemen");
+trie.AddWord("Zambia");
+trie.AddWord("Zimbabwe");
 Console.WriteLine("Words in the trie:");
 foreach (var word in trie)
 {
@@ -11,26 +235,19 @@ foreach (var word in trie)
 }
 
 Console.WriteLine();
-Console.WriteLine("Words starting with 'de':");
 
-
-foreach (string s in trie.GetWordsWithPrefix("de"))
+void Test(string prefix)
 {
-    Console.WriteLine("\t{0}", s);
+    Console.WriteLine("Words starting with '{0}':", prefix);
+    foreach (string s in trie.GetWordsWithPrefix(prefix))
+    {
+        Console.WriteLine("\t{0}", s);
+    }
 }
 
-Console.WriteLine("Words starting with 'd':");
-
-foreach (string s in trie.GetWordsWithPrefix("d"))
-{
-    Console.WriteLine("\t{0}", s);
-}
-
-Console.WriteLine("Words starting with 'a':");
-
-foreach (string s in trie.GetWordsWithPrefix("a"))
-{
-    Console.WriteLine("\t{0}", s);
-}
+Test("A");
+Test("Ab");
+Test("Co");
+Test("Pue");
 
 Console.WriteLine("Done.");
