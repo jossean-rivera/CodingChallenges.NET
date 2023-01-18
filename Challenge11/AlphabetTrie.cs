@@ -1,27 +1,34 @@
 ﻿
 using System.Collections;
+using System.Xml.Linq;
+
 /// <summary>
 /// A trie data structure for words
 /// </summary>
 internal class AlphabetTrie : IEnumerable<string>
 {
-    private const int AlphabetSize = 'Z' - 'A';
-    private readonly Node[] _root = new Node[AlphabetSize];
+    private readonly Dictionary<char, Node> _root2 = new();
 
     public void AddWord(string word)
     {
-        word = word.Trim().ToUpper();
         if (string.IsNullOrWhiteSpace(word)) return;
 
         char c;
-        Node[] index = _root;
+        Dictionary<char, Node> index = _root2;
 
         for (int i = 0; i < word.Length; i++)
         {
             c = word[i];
-            ref Node node = ref index[c - 'A'];
-
-            node ??= new Node(c);
+            Node? node;
+            if (!index.ContainsKey(c))
+            {
+                node = new(c);
+                index[c] = node;
+            }
+            else
+            {
+                node = index[c];
+            }
 
             if (i == word.Length - 1)
             {
@@ -32,23 +39,23 @@ internal class AlphabetTrie : IEnumerable<string>
         }
     }
 
-    public IEnumerable<string> GetWordsWithPrefix(string prefix) 
+    public IEnumerable<string> GetWordsWithPrefix(string prefix)
     {
-        prefix = prefix.ToUpper();
+        prefix = prefix.ToLower();
         char c;
 
-        Node[] index = _root;
+        Dictionary<char, Node> index = _root2;
 
         for (int i = 0; i < prefix.Length; i++)
         {
             c = prefix[i];
 
-            Node node = index[c - 'A'];
-
-            if (node == null)
+            if (!index.ContainsKey(c))
             {
                 return Enumerable.Empty<string>();
             }
+
+            Node node = index[c];
 
             index = node.Children;
         }
@@ -56,7 +63,7 @@ internal class AlphabetTrie : IEnumerable<string>
         return GetPossibleWordsFromRoot(index, prefix) ?? Enumerable.Empty<string>();
     }
 
-    private IEnumerable<string>? GetPossibleWordsFromRoot(Node[] root, string prefix)
+    private IEnumerable<string>? GetPossibleWordsFromRoot(Dictionary<char, Node> root, string prefix)
     {
         if (root == null)
         {
@@ -65,8 +72,10 @@ internal class AlphabetTrie : IEnumerable<string>
 
         HashSet<string>? result = null;
 
-        foreach (Node node in root.Where(n => n is not null))
+        foreach (KeyValuePair<char, Node> item in root)
         {
+            Node node = item.Value;
+
             if (node.IsTerminal)
             {
                 result ??= new();
@@ -100,22 +109,14 @@ internal class AlphabetTrie : IEnumerable<string>
     {
         public char Letter;
         public bool IsTerminal;
-        public Node[] Children;
+        public Dictionary<char, Node> Children;
 
         public Node(char letter) 
         {
             Letter = letter;
-            Children = new Node[AlphabetSize];
+            Children = new();
         }
 
-        public override string ToString()
-        {
-            if (IsTerminal)
-            {
-                return $"{Letter} [END]";
-            }
-
-            return Letter.ToString();
-        }
+        public override string ToString() => IsTerminal ? $"{Letter} [END]" : Letter.ToString();
     }
 }
